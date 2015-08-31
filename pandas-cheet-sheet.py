@@ -14,3 +14,8 @@ int(value or 0)
 df = pd.DataFrame([1921,1924,1941,1956,1965,1970,1980,1992,1999,2014])
 year_category_labels = ['pre-war', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', 'modern cars']
 pd.cut(df.year, [0,1939,1946,1950,1960,1970,1980,1990,2015], labels=year_labels)
+
+# Creating a DataFrame. (Put the dict in a list)
+mydata = [{'subid' : 'B14-111', 'age': 75, 'fdg':1.78},
+              {'subid' : 'B14-112', 'age': 22, 'fdg':1.56},]
+df = pandas.DataFrame(mydata)
