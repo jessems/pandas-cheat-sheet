@@ -19,3 +19,6 @@ pd.cut(df.year, [0,1939,1946,1950,1960,1970,1980,1990,2015], labels=year_labels)
 mydata = [{'subid' : 'B14-111', 'age': 75, 'fdg':1.78},
               {'subid' : 'B14-112', 'age': 22, 'fdg':1.56},]
 df = pandas.DataFrame(mydata)
+
+# Subtracting two DataFrames with non-overlapping indices
+A.combineAdd(-B)
