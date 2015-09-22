@@ -22,3 +22,19 @@ df = pandas.DataFrame(mydata)
 
 # Subtracting two DataFrames with non-overlapping indices
 A.combineAdd(-B)
+
+# Change xticks rotation for barplot
+plt.figure()
+ax = result.plot(kind='bar', figsize=(16,8), width=1.0)
+plt.xticks(rotation=45)
+
+# Set xy labels
+ax = df.plot()
+ax.set_xlabel('x label')
+ax.set_ylabel('y label')
+
+# Format thousand mark in xticks
+ax.get_xaxis().set_major_formatter(matplotlib.ticker.FuncFormatter(lambda x, p: format(int(x), ',')))
+
+# Rename a column (in place)
+df.rename(columns={'$a': 'a', '$b': 'b'}, inplace=True)
